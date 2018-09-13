@@ -1,23 +1,213 @@
-import { Head } from 'mdx-deck'
+import { Head, Image } from 'mdx-deck'
+import { SplitRight } from 'mdx-deck/layouts'
+import Code from './Code';
 
 export { default as theme } from './theme'
 
 <Head>
-  <title>Presentation Title</title>
+  <title>Hello TypeScript!</title>
 </Head>
 
-# Hello
+
+# Hello TypeScript!
 
 ---
 
-## Edit this file
+![](assets/ts-fan.png)
 
-To create your presentation
+---
+
+## Why should I care? 🤷‍♂️
+
+---
+
+![](assets/olympics.gif)
+
+---
+
+## What is TypeScript?
+
+*[..], it basically formalizes a **static type system** that describes JavaScript's dynamic types, but it describes them **at development time**.*
+
+*- Anders Hejlsberg*
+
+---
+
+### Design Goals
+
+- Superset of JavaScript
+- Tooling Support
+- Compile to JavaScript
+- Support ECMAScript Stage 3
+
+---
+
+## Type System
+
+---
+
+![https://twitter.com/thespite/status/996792017693958144?s=09](assets/tweet-js-vs-ts.png)
+
+---
+
+- Object- **and** Functional-orineted
+- Structural Typing (unsound)
+- Extensive Type Inference
+- Control Flow based Type Analysis
+
+---
+
+<Code
+  title="Structural Typing"
+  code={require("!raw-loader!./demo/structural-typing.ts")}
+  steps={[
+    { range: [1, 9] },
+    { range: [11, 17] },
+    { range: [19, 22] },
+  ]}
+/>
+
+---
+
+<Code
+  title="Extensive Type Inference"
+  code={require("!raw-loader!./demo/type-inference.ts")}
+  steps={[
+    { range: [1, 4] },
+    { lines: [5] },
+    { range: [7, 10] },
+    { range: [12, 15] },
+  ]}
+/>
+
+---
+
+### Example: `JSONified`
+
+---
+
+<Code
+  title="Control Flow Analysis"
+  code={require("!raw-loader!./demo/control-flow.ts")}
+  steps={[
+    { lines: [1] },
+    { tokens: { 1: [4] } },
+    { tokens: { 1: [6] } },
+    { tokens: { 1: [8, 9, 10, 11] } },
+    { tokens: { 1: [15, 16, 17, 18, 19, 20, 21] } },
+    { range: [2, 4] },
+    { range: [6, 8] },
+    { lines: [10] },
+  ]}
+/>
+
+---
+
+![https://medium.com/@martin_hotell/improved-redux-type-safety-with-typescript-2-8-2c11a8062575](assets/redux.gif)
+
+---
+
+<Code
+  title="'Stringly-typed' APIs"
+  code={require("!raw-loader!./demo/emitter.ts")}
+  steps={[
+    { range: [6, 10] },
+    { lines: [13] },
+    { range: [15, 18] },
+    { range: [20, 21] },
+    { range: [23, 24] },
+    { range: [26, 27] },
+    { range: [29, 30] },
+  ]}
+/>
+
+---
+
+![https://twitter.com/headinthebox/status/997499854321405953](assets/headinthebox.png)
+
+---
+
+# 🛠
+
+---
+
+# @types
+
+---
+
+export default SplitRight
+
+![https://github.com/DefinitelyTyped/DefinitelyTyped](assets/dt-types.png)
+![https://github.com/DefinitelyTyped/DefinitelyTyped](assets/dt-contributors.png)
+
+![https://octoverse.github.com/](assets/definitely-typed.png)
+
+---
+
+![https://github.com/Microsoft/TypeScript/wiki/Architectural-Overview](assets/architecture.png)
 
 ```notes
-- Create speaker notes in fenced code blocks
+  tsserver (node.js) <-> Editor / TypeScript Plugin -> Language Service
 ```
 
 ---
 
-<https://github.com/jxnblk/mdx-deck>
+<Image src='assets/js-check.jpg' />
+
+```notes
+Source: https://twitter.com/housecor/status/998966257234870272
+```
+
+---
+
+![https://github.com/Microsoft/typescript-styled-plugin](assets/styled-components.gif)
+
+---
+
+# 💪
+
+---
+
+### Why use TypeScript?
+
+- JavaScript, but built for more scale™️
+- Tooling support for type safety, inference and refactoring
+- Static types and compilation helps catch mistakes & bugs earlier
+- Works well with existing projects
+- Compiles to idiomatic JavaScript
+
+---
+
+# 🍑
+
+```notes
+- Has a learninv curve
+- **NOT** Java/C# (JS knowledge still required)
+- Typings can be 💩
+- Some(times) extra work for building
+- Sometimes a lot of churn (too complex types, too much generics)
+```
+
+---
+
+![](assets/annotations.jpeg)
+
+---
+
+![](assets/npm.jpg)
+
+---
+
+```notes
+- Configuration (strictness, target, non-nullable check, ...)
+- Tooling (Intellisense, auto import, ...)
+- Reafactoring (rename, extract function, ...)
+- Supports JSX
+- Plugin (teach the compiler new tricks!)
+
+  - find small bugs
+  - non-nullable type checking
+  - JSX support
+  - @types
+  - "stringly-typed" APIs `emitter.on('foo', ...)`
+```
