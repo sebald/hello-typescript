@@ -4,13 +4,16 @@ import { Socket } from 'net';
 import StrictEventEmitter from 'strict-event-emitter-types';
 
 // define your events
-interface Events {
-  request: (request: IncomingMessage, response: OutgoingMessage) => void;
-  done: void;
-}
+const events = {
+  request: (request: IncomingMessage, response: OutgoingMessage) => {},
+  done: () => {},
+};
 
 // Create strict event emitter types
-const emitter: StrictEventEmitter<EventEmitter, Events> = new EventEmitter();
+const emitter: StrictEventEmitter<
+  EventEmitter,
+  typeof events
+> = new EventEmitter();
 
 // req and res are contextually typed to Request and Response
 emitter.on('request', (req, res) => {

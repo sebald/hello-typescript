@@ -17,14 +17,6 @@ export { default as theme } from './theme'
 
 ---
 
-## Why should I care? 🤷‍♂️
-
----
-
-![](assets/olympics.gif)
-
----
-
 ## What is TypeScript?
 
 *[..], it basically formalizes a **static type system** that describes JavaScript's dynamic types, but it describes them **at development time**.*
@@ -33,12 +25,28 @@ export { default as theme } from './theme'
 
 ---
 
-### Design Goals
+## Why should I care? 🤷‍♂️
 
-- Superset of JavaScript
-- Tooling Support
-- Compile to JavaScript
-- Support ECMAScript Stage 3
+---
+
+![](assets/olympics.gif)
+
+---
+
+- JavaScript, built for scale™️ (documentation)
+- Static types helps catch mistakes & bugs earlier
+- Refactor with confidence
+- Works well with existing projects
+- Compiles to idiomatic JavaScript
+- Supports ECMAScript Stage 3
+
+```notes
+- Configuration (strictness, target, non-nullable check, ...)
+- Tooling (Intellisense, auto import, ...)
+- Reafactoring (rename, extract function, ...)
+- non-nullable type checking
+- JSX support
+```
 
 ---
 
@@ -46,7 +54,28 @@ export { default as theme } from './theme'
 
 ---
 
+<Code
+  title="Type System"
+  code={require("!raw-loader!./demo/type-system.ts")}
+  steps={[
+    { lines: [1] },
+    { tokens: { 1: [2, 4] } },
+    { range: [3, 5] },
+    { tokens: { 3: [5, 6, 8] } },
+    { range: [7, 9] },
+    { tokens: { 7: [3, 4, 5, 8, 10] } },
+    { range: [11, 18] },
+    { range: [20, 22] },
+  ]}
+/>
+
+---
+
 ![https://twitter.com/thespite/status/996792017693958144?s=09](assets/tweet-js-vs-ts.png)
+
+---
+
+![](assets/boring.gif)
 
 ---
 
@@ -61,9 +90,8 @@ export { default as theme } from './theme'
   title="Structural Typing"
   code={require("!raw-loader!./demo/structural-typing.ts")}
   steps={[
-    { range: [1, 9] },
-    { range: [11, 17] },
-    { range: [19, 22] },
+    { range: [1, 10] },
+    { range: [12, 20] },
   ]}
 />
 
@@ -82,7 +110,7 @@ export { default as theme } from './theme'
 
 ---
 
-### Example: `JSONified`
+### Example: "JSONified"
 
 ---
 
@@ -111,13 +139,13 @@ export { default as theme } from './theme'
   title="'Stringly-typed' APIs"
   code={require("!raw-loader!./demo/emitter.ts")}
   steps={[
-    { range: [6, 10] },
-    { lines: [13] },
-    { range: [15, 18] },
-    { range: [20, 21] },
+    { range: [7, 10] },
+    { range: [13, 16] },
+    { range: [19, 21] },
     { range: [23, 24] },
     { range: [26, 27] },
     { range: [29, 30] },
+    { range: [32, 33] },
   ]}
 />
 
@@ -164,21 +192,18 @@ Source: https://twitter.com/housecor/status/998966257234870272
 
 ---
 
-# 💪
-
----
-
-### Why use TypeScript?
-
-- JavaScript, but built for more scale™️
-- Tooling support for type safety, inference and refactoring
-- Static types and compilation helps catch mistakes & bugs earlier
-- Works well with existing projects
-- Compiles to idiomatic JavaScript
+![https://marketplace.visualstudio.com/items?itemName=Angular.ng-template](assets/angular.gif)
 
 ---
 
 # 🍑
+
+---
+
+- Learning curve
+- Have to know JavaScript
+- **NOT** Java/C#
+- Typings can be 💩
 
 ```notes
 - Has a learninv curve
@@ -198,16 +223,18 @@ Source: https://twitter.com/housecor/status/998966257234870272
 
 ---
 
-```notes
-- Configuration (strictness, target, non-nullable check, ...)
-- Tooling (Intellisense, auto import, ...)
-- Reafactoring (rename, extract function, ...)
-- Supports JSX
-- Plugin (teach the compiler new tricks!)
+## 📚📚📚
 
-  - find small bugs
-  - non-nullable type checking
-  - JSX support
-  - @types
-  - "stringly-typed" APIs `emitter.on('foo', ...)`
-```
+- https://basarat.gitbooks.io/typescript/content/
+- https://www.typescriptlang.org/docs/home.html
+- https://stackoverflow.com/questions/tagged/typescript
+- https://github.com/Microsoft/TypeScript
+- Ask a colleague!
+
+---
+
+# Thank you!
+
+## 👏
+
+https://git.rsvx.it/sebastian.sebald/hello-typescript
