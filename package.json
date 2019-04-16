@@ -1,14 +1,8 @@
 {
+  "name": "typescript-is-awesome",
   "private": true,
   "version": "1.0.0",
   "description": "Deck created with mdx-deck",
-  "scripts": {
-    "start": "mdx-deck deck.mdx",
-    "build": "mdx-deck build deck.mdx",
-    "pdf": "mdx-deck pdf deck.mdx",
-    "image": "mdx-deck screenshot deck.mdx",
-    "help": "mdx-deck"
-  },
   "keywords": [],
   "author": "Brent Jackson",
   "license": "MIT",
@@ -23,5 +17,11 @@
     "styled-components": "^4.2.0",
     "typescript": "^3.4.3"
   },
-  "name": "typescript-is-awesome"
+  "scripts": {
+    "start": "mdx-deck deck.mdx",
+    "build": "mdx-deck build deck.mdx",
+    "pdf": "mdx-deck pdf deck.mdx",
+    "image": "mdx-deck screenshot deck.mdx",
+    "help": "mdx-deck"
+  }
 }
