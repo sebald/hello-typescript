@@ -8,7 +8,7 @@ export default {
   ...theme,
   colors: {
     ...theme.colors,
-    heading: '#0074D9',
+    heading: '#2962FF',
   },
   prism: {
     style: tomorrow,
@@ -17,6 +17,15 @@ export default {
     },
   },
 
+  blockquote: {
+    borderLeft: '10px solid #eee',
+    paddingLeft: '50px',
+    fontWeight: '400',
+  },
+
+  li: {
+    paddingBottom: '10px',
+  },
   // Customize your presentation theme here.
   //
   // Read the docs for more info:
