@@ -1,10 +1,10 @@
 import { both, either } from './lib';
 
-type Person = {
+interface Person {
   birthCountry: string;
   naturalizationDate: Date | null;
   age: number;
-};
+}
 
 const wasBornInCountry = (person: Person) => person.birthCountry === 'Germany';
 const wasNaturalized = (person: Person) => Boolean(person.naturalizationDate);

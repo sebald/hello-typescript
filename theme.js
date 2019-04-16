@@ -1,26 +1,18 @@
 // @ts-nocheck
-
 import theme from 'mdx-deck/themes';
-import tomorrow from 'react-syntax-highlighter/styles/prism/tomorrow';
-import prismTypeScript from 'react-syntax-highlighter/languages/prism/typescript';
 
 export default {
   ...theme,
   colors: {
     ...theme.colors,
-    heading: '#0074D9',
-  },
-  prism: {
-    style: tomorrow,
-    languages: {
-      ts: prismTypeScript,
-    },
+    text: '#011627',
   },
 
   blockquote: {
     borderLeft: '10px solid #eee',
     paddingLeft: '50px',
     fontWeight: '400',
+    fontSize: '1.25em',
   },
 
   li: {

@@ -12,13 +12,14 @@
   "keywords": [],
   "author": "Brent Jackson",
   "license": "MIT",
-  "devDependencies": {
+  "dependencies": {
     "@types/node": "^11.13.4",
-    "mdx-deck": "^1.6.7",
-    "mdx-deck-code-surfer": "^0.4.1",
+    "mdx-deck": "^1.10.0",
+    "mdx-deck-code-surfer": "^0.5.5",
     "p-pipe": "^3.0.0",
-    "raw-loader": "^0.5.1",
+    "raw-loader": "^2.0.0",
     "strict-event-emitter-types": "^2.0.0",
+    "styled-components": "^4.2.0",
     "typescript": "^3.4.3"
   },
   "name": "typescript-is-awesome"
