@@ -115,8 +115,10 @@ That's the boring part!
   title="Object-oriented"
   code={require("!raw-loader!./demo/oop.ts")}
   steps={[
+    { range: [1, 27] },
     { range: [3, 5] },
     { range: [12, 14] },
+    { range: [1, 27] },
   ]}
 />
 
@@ -126,8 +128,10 @@ That's the boring part!
   title="Functional"
   code={require("!raw-loader!./demo/functional.ts")}
   steps={[
+    { range: [1, 15] },
     { range: [3, 7] },
     { range: [9, 11] },
+    { range: [1, 15] },
   ]}
 />
 
@@ -141,6 +145,7 @@ That's the boring part!
     { lines: [5] },
     { range: [7, 10] },
     { range: [12, 15] },
+    { range: [1, 15] },
   ]}
 />
 
@@ -158,11 +163,8 @@ That's the boring part!
   title="Control Flow Analysis"
   code={require("!raw-loader!./demo/control-flow.ts")}
   steps={[
+    { range: [1, 11] },
     { lines: [1] },
-    { tokens: { 1: [4] } },
-    { tokens: { 1: [6] } },
-    { tokens: { 1: [8, 9, 10, 11] } },
-    { tokens: { 1: [15, 16, 17, 18, 19, 20, 21] } },
     { range: [2, 4] },
     { range: [6, 8] },
     { lines: [10] },
@@ -171,7 +173,19 @@ That's the boring part!
 
 ---
 
-![https://medium.com/@martin_hotell/improved-redux-type-safety-with-typescript-2-8-2c11a8062575](assets/redux.gif)
+<Code
+  title="Type-safe redux"
+  code={require("!raw-loader!./demo/redux.ts")}
+  steps={[
+    { range: [1, 68] },
+    { range: [5, 6] },
+    { range: [8, 23] },
+    { range: [5, 23] },
+    { range: [26, 39] },
+    { range: [42, 48] },
+    { range: [50, 68] },
+  ]}
+/>
 
 ---
 
@@ -179,9 +193,10 @@ That's the boring part!
   title="'Stringly-typed' APIs"
   code={require("!raw-loader!./demo/emitter.ts")}
   steps={[
+    { range: [1, 33] },
     { range: [7, 10] },
     { range: [13, 16] },
-    { range: [19, 21] },
+    { range: [18, 21] },
     { range: [23, 24] },
     { range: [26, 27] },
     { range: [29, 30] },
@@ -242,6 +257,20 @@ Source: https://twitter.com/housecor/status/998966257234870272
 
 ---
 
+#### @typescript-eslint
+
+![https://medium.com/@dors718/linting-your-react-typescript-project-with-eslint-and-prettier-2423170c3d42](assets/eslint.png)
+
+---
+
+<Code
+  title=".eslintrc"
+  lang="json"
+  code={require("!raw-loader!./demo/.eslintrc")}
+/>
+
+---
+
 # 🍑
 
 ---
@@ -290,8 +319,9 @@ https://github.com/sebald/hello-typescript
 
 ---
 
-## 📚📚📚
+## 📚 Resources
 
 - https://github.com/Microsoft/TypeScript
 - http://www.techladder.io/?tech=typescript
 - https://dev.to/wolksoftware/why-typescript-is-a-better-option-than-javascript-when-it-comes-to-functional-programming-3mp0
+- https://redux.js.org/recipes/usage-with-typescript
