@@ -8,7 +8,7 @@ export default {
   ...theme,
   colors: {
     ...theme.colors,
-    heading: '#2962FF',
+    heading: '#0074D9',
   },
   prism: {
     style: tomorrow,
