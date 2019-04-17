@@ -9,7 +9,7 @@ const events = {
   done: () => {},
 };
 
-// Create strict event emitter types
+// Create strict event emitter
 const emitter: StrictEventEmitter<
   EventEmitter,
   typeof events

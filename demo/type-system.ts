@@ -1,4 +1,5 @@
-const num: number = 5;
+let num = 5;
+num = '123'; // Type '"123"' is not assignable to type 'number'.
 
 function scream(s: string) {
   return s.toUpperCase();
@@ -17,6 +18,5 @@ const apple: Food = {
   type: 'Fruit',
 };
 
-// Escape hatch
 let x: any = { foo: 'bar' };
 x = 123;

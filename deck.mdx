@@ -70,14 +70,11 @@ Makes **implicit** types **explicit**.
   title="Type System"
   code={require("!raw-loader!./demo/type-system.ts")}
   steps={[
-    { lines: [1] },
-    { tokens: { 1: [2, 4] } },
-    { range: [3, 5] },
-    { tokens: { 3: [5, 6, 8] } },
-    { range: [7, 9] },
-    { tokens: { 7: [3, 4, 5, 8, 10] } },
-    { range: [11, 18] },
-    { range: [20, 22] },
+    { range: [1, 2], notes: 'Type Inference' },
+    { range: [3, 6], notes: 'Function signature' },
+    { range: [8, 10], notes: 'Generics' },
+    { range: [12, 19], notes: 'Interfaces' },
+    { range: [21, 22], notes: 'Escape hatch' },
   ]}
 />
 
@@ -115,8 +112,7 @@ That's the boring part!
   title="Object-oriented"
   code={require("!raw-loader!./demo/oop.ts")}
   steps={[
-    { range: [1, 27] },
-    { range: [3, 5] },
+    { range: [3, 5], notes: 'Prop initialization shorthand' },
     { range: [12, 14] },
     { range: [1, 27] },
   ]}
@@ -128,9 +124,9 @@ That's the boring part!
   title="Functional"
   code={require("!raw-loader!./demo/functional.ts")}
   steps={[
-    { range: [1, 15] },
     { range: [3, 7] },
     { range: [9, 11] },
+    { lines: [15], notes: 'Signature: (a: Person) => boolean' },
     { range: [1, 15] },
   ]}
 />
@@ -141,7 +137,7 @@ That's the boring part!
   title="Extensive Type Inference"
   code={require("!raw-loader!./demo/type-inference.ts")}
   steps={[
-    { range: [1, 4] },
+    { range: [1, 4], notes: 'Immutable dictonary' },
     { lines: [5] },
     { range: [7, 10] },
     { range: [12, 15] },
@@ -163,11 +159,27 @@ That's the boring part!
   title="Control Flow Analysis"
   code={require("!raw-loader!./demo/control-flow.ts")}
   steps={[
-    { range: [1, 11] },
-    { lines: [1] },
-    { range: [2, 4] },
-    { range: [6, 8] },
-    { lines: [10] },
+    { lines: [1], notes: 'Different input types 😲' },
+    { range: [2, 4], notes: 'Argument is an "Error"' },
+    { range: [6, 8], notes: 'Argument is an "Array"' },
+    { lines: [10], notes: 'Can only be a "{ msg: string }"' },
+  ]}
+/>
+
+
+---
+
+<Code
+  title="'Stringly-typed' APIs"
+  code={require("!raw-loader!./demo/emitter.ts")}
+  steps={[
+    { range: [7, 10], notes: 'Define events' },
+    { range: [13, 16], notes: 'Create strict emiiter' },
+    { range: [18, 21] },
+    { range: [23, 24] },
+    { range: [26, 27] },
+    { range: [29, 30] },
+    { range: [32, 33] },
   ]}
 />
 
@@ -177,33 +189,13 @@ That's the boring part!
   title="Type-safe redux"
   code={require("!raw-loader!./demo/redux.ts")}
   steps={[
-    { range: [1, 68] },
-    { range: [5, 6] },
-    { range: [8, 23] },
-    { range: [5, 23] },
-    { range: [26, 39] },
-    { range: [42, 48] },
-    { range: [50, 68] },
+    { range: [5, 6], notes: 'Action Types' },
+    { range: [8, 23], notes: 'Actions' },
+    { range: [26, 39], notes: 'Action Creators' },
+    { range: [42, 48], notes: 'State' },
+    { range: [50, 68], notes: 'Reducer' },
   ]}
 />
-
----
-
-<Code
-  title="'Stringly-typed' APIs"
-  code={require("!raw-loader!./demo/emitter.ts")}
-  steps={[
-    { range: [1, 33] },
-    { range: [7, 10] },
-    { range: [13, 16] },
-    { range: [18, 21] },
-    { range: [23, 24] },
-    { range: [26, 27] },
-    { range: [29, 30] },
-    { range: [32, 33] },
-  ]}
-/>
-
 ---
 
 ![https://twitter.com/headinthebox/status/997499854321405953](assets/headinthebox.png)
