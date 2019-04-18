@@ -6,11 +6,12 @@
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "lib": ["esnext"],
+    "jsx": "react",
     "strict": true,
     "noImplicitReturns": true,
     "noUnusedLocals": true,
     "sourceMap": true,
-    "declaration": true
+    "skipLibCheck": true
   },
   "exclude": ["node_modules"]
 }
