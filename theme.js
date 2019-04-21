@@ -6,6 +6,7 @@ export default {
   colors: {
     ...theme.colors,
     text: '#011627',
+    link: '#011627',
   },
 
   heading: {
