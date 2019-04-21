@@ -22,6 +22,11 @@
     "build": "mdx-deck build --no-html deck.mdx",
     "pdf": "mdx-deck pdf deck.mdx",
     "image": "mdx-deck screenshot deck.mdx",
-    "help": "mdx-deck"
+    "help": "mdx-deck",
+    "typecheck": "tsc -p demo --noEmit"
+  },
+  "devDependencies": {
+    "@types/react": "^16.8.13",
+    "react": "^16.8.6"
   }
 }

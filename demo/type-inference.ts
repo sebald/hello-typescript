@@ -2,9 +2,9 @@ interface Immutable<T> {
   get<K extends keyof T>(name: K): T[K];
   set<S>(o: S): Immutable<T & S>;
 }
-declare function Store<T>(o: T): Immutable<T>;
+declare function createStore<T>(o: T): Immutable<T>;
 
-const alice = Store({ name: 'Alice', age: 29 });
+const alice = createStore({ name: 'Alice', age: 29 });
 alice.get('name'); // Ok, returns a `string`
 alice.get('age'); // Ok, returns a `number`
 alice.get('lastName'); // Error
