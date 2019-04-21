@@ -8,8 +8,23 @@ export default {
     text: '#011627',
   },
 
+  heading: {
+    position: 'relative',
+    '&:before': {
+      content: '""',
+      position: 'absolute',
+      bottom: '1%',
+      left: '3%',
+      right: '3%',
+      height: '25%',
+      background: '#7fdbca',
+      opacity: '0.5',
+      zIndex: '-1'
+    },
+  },
+
   blockquote: {
-    borderLeft: '10px solid #eee',
+    borderLeft: '20px solid rgba(127, 219, 202, 0.5)',
     paddingLeft: '50px',
     fontWeight: '400',
     fontSize: '1.25em',
