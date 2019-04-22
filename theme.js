@@ -24,6 +24,12 @@ export default {
     },
   },
 
+  h1: {
+    '&:before': {
+      background: 'none',
+    },
+  },
+
   blockquote: {
     borderLeft: '20px solid rgba(127, 219, 202, 0.5)',
     paddingLeft: '50px',
@@ -34,6 +40,7 @@ export default {
   li: {
     paddingBottom: '10px',
   },
+
   // Customize your presentation theme here.
   //
   // Read the docs for more info:

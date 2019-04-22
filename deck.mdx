@@ -1,4 +1,4 @@
-import { Head, h1, Image } from 'mdx-deck'
+import { Head, Image } from 'mdx-deck'
 import { SplitRight } from 'mdx-deck/layouts'
 import Code from './Code';
 
@@ -16,7 +16,20 @@ export { default as theme } from './theme'
   <link rel="shortcut icon" href="assets/fav.png"/>
 </Head>
 
-# Hello TypeScript
+<Image 
+  src="assets/deck.png"
+  style={{
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundSize: 'auto',
+    backgroundRepeat: 'repeat',
+  }}
+>
+  <h1 style={{
+    fontSize: '3em',
+  }}>Hello TypeScript</h1>
+</Image>
 
 ---
 
@@ -226,7 +239,7 @@ That's the boring part!
 
 ---
 
-# @types
+## @types
 
 ---
 
@@ -320,7 +333,7 @@ Source: https://twitter.com/housecor/status/998966257234870272
 
 # Thank you!
 
-👏
+# 👏
 
 https://github.com/sebald/hello-typescript
 
@@ -328,7 +341,7 @@ https://github.com/sebald/hello-typescript
 
 ## 📚 Resources
 
-- https://github.com/Microsoft/TypeScript
 - http://www.techladder.io/?tech=typescript
-- https://dev.to/wolksoftware/why-typescript-is-a-better-option-than-javascript-when-it-comes-to-functional-programming-3mp0
-- https://redux.js.org/recipes/usage-with-typescript
+- https://mariusschulz.com/blog
+- https://github.com/Microsoft/TypeScript
+- https://github.com/sw-yx/react-typescript-cheatsheet
