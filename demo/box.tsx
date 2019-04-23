@@ -1,13 +1,16 @@
 import React from 'react';
 
-type HtmlTag = keyof JSX.IntrinsicElements;
+type Tags = keyof JSX.IntrinsicElements;
 
-export type BoxProps<Tag extends HtmlTag = 'div'> = {
+export type BoxProps<Tag extends Tags = 'div'> = {
   as?: Tag;
   children?: React.ReactNode;
 } & JSX.IntrinsicElements[Tag];
 
-export const Box = <T extends HtmlTag>({ as, ...props }: BoxProps<T>) =>
+export const Box = <T extends Tags>({
+  as,
+  ...props
+}: BoxProps<T>) =>
   React.createElement(as || 'div', props);
 
 // ---
