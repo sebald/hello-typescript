@@ -23,10 +23,12 @@
     "pdf": "mdx-deck pdf deck.mdx",
     "image": "mdx-deck screenshot deck.mdx",
     "help": "mdx-deck",
-    "typecheck": "tsc -p demo --noEmit"
+    "typecheck": "tsc -p demo --noEmit",
+    "format": "prettier --write \"demo/**/*.{ts,tsx}\""
   },
   "devDependencies": {
     "@types/react": "^16.8.13",
+    "prettier": "^1.17.0",
     "react": "^16.8.6"
   }
 }
