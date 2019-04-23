@@ -118,8 +118,11 @@ That's the boring part!
   title="Structural Typing"
   code={require("!raw-loader!./demo/structural-typing.ts")}
   steps={[
-    { range: [1, 10] },
-    { range: [12, 20] },
+    { range: [1, 10], notes: 'Interface & Class' },
+    { range: [12, 13] },
+    { range: [15, 17] },
+    { range: [15, 20], notes: 'Extra props are allowed' },
+    { range: [1, 20] },
   ]}
 />
 
@@ -136,6 +139,10 @@ That's the boring part!
   ]}
 />
 
+```notes
+From: https://dev.to/wolksoftware/why-typescript-is-a-better-option-than-javascript-when-it-comes-to-functional-programming-3mp0
+```
+
 ---
 
 <Code
@@ -144,7 +151,7 @@ That's the boring part!
   steps={[
     { range: [1, 15] },
     { range: [3, 7] },
-    { range: [9, 11] },
+    { range: [9, 13] },
     { lines: [15], notes: 'Signature: (a: Person) => boolean' },
     { range: [1, 15] },
   ]}
@@ -171,7 +178,7 @@ That's the boring part!
   title="Infer Props"
   code={require("!raw-loader!./demo/box.tsx")}
   steps={[
-    { range: [3, 11], notes: 'Define a component' },
+    { range: [5, 11], notes: 'Define a component' },
     { lines: [15] },
     { range: [17, 18] },
   ]}
