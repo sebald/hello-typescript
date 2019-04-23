@@ -12,7 +12,9 @@ class Person {
 let p: Named;
 p = new Person('Alice');
 
-function fn(person: Person) { /*... */ }
+function fn(person: Person) {
+  /* ... */
+}
 
 fn(p);
 
