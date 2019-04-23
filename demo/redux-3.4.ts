@@ -1,42 +1,29 @@
 import { Reducer } from 'redux';
 import { getId } from './lib';
 
-// messages/types.ts
-const SEND_MESSAGE = 'SEND_MESSAGE';
-const DELETE_MESSAGE = 'DELETE_MESSAGE';
-
-interface SendMessageAction {
-  type: typeof SEND_MESSAGE;
-  payload: {
-    id: number;
-    message: string;
-  };
-}
-
-interface DeleteMessageAction {
-  type: typeof DELETE_MESSAGE;
-  payload: {
-    id: number;
-  };
-}
-
-type MessageActions = SendMessageAction | DeleteMessageAction;
-
 // message/actions.ts
-export const sendMessage = (newMessage: string): SendMessageAction => ({
-  type: SEND_MESSAGE,
-  payload: {
-    id: getId(),
-    message: newMessage,
-  },
-});
+const sendMessage = (newMessage: string) =>
+  ({
+    type: 'SEND_MESSAGE',
+    payload: {
+      id: getId(),
+      message: newMessage,
+    },
+  } as const);
 
-export const deleteMessage = (id: number): DeleteMessageAction => ({
-  type: DELETE_MESSAGE,
-  payload: {
-    id,
-  },
-});
+const deleteMessage = (id: number) =>
+  ({
+    type: 'DELETE_MESSAGE',
+    payload: {
+      id,
+    },
+  } as const);
+
+// prettier-ignore
+type MessageActions = ReturnType<
+  | typeof sendMessage 
+  | typeof deleteMessage
+>;
 
 // messages/reducer.ts
 interface MessageState {

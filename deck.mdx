@@ -225,14 +225,26 @@ From: https://dev.to/wolksoftware/why-typescript-is-a-better-option-than-javascr
 ---
 
 <Code
-  title="Type-safe redux"
+  title="Redux (pre-3.4)"
   code={require("!raw-loader!./demo/redux.ts")}
   steps={[
-    { range: [5, 6], notes: 'Action Types' },
-    { range: [8, 23], notes: 'Actions' },
-    { range: [26, 39], notes: 'Action Creators' },
-    { range: [42, 48], notes: 'State' },
-    { range: [50, 68], notes: 'Reducer' },
+    { range: [1, 68] },
+  ]}
+/>
+
+---
+
+<Code
+  title="Redux"
+  code={require("!raw-loader!./demo/redux-3.4.ts")}
+  steps={[
+    { range: [1, 49] },
+    { range: [5, 20], notes: 'Action Creators' },
+    { range: [23, 26], notes: 'Actions' },
+    { range: [29, 35], notes: 'State' },
+    { range: [37, 55], notes: 'Reducer' },
+    { range: [42, 45], notes: 'Handle "SendMessageAction"' },
+    { range: [46, 51], notes: 'Handle "DeleteMessageAction"' },
   ]}
 />
 
