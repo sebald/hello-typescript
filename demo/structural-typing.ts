@@ -12,9 +12,9 @@ class Person {
 let p: Named;
 p = new Person('Alice');
 
-function fn(person: Person) {
-  /** Do something */
-}
+function fn(person: Person) { /*... */ }
 
 fn(p);
-fn({ name: 'Bob' });
+
+const o = { name: 'Bob', surname: 'Smith' };
+fn(o);
