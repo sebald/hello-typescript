@@ -176,9 +176,11 @@ From: https://dev.to/wolksoftware/why-typescript-is-a-better-option-than-javascr
   title="Infer Props"
   code={require("!raw-loader!./demo/box.tsx")}
   steps={[
-    { range: [5, 11], notes: 'Define a component' },
-    { lines: [15] },
-    { range: [17, 18] },
+    { range: [1, 21] },
+    { range: [5, 8], notes: 'Define props' },
+    { range: [10, 14], notes: 'Define component' },
+    { lines: [18] },
+    { range: [20, 21] },
   ]}
 />
 
@@ -202,23 +204,6 @@ From: https://dev.to/wolksoftware/why-typescript-is-a-better-option-than-javascr
     { lines: [10], notes: 'Can only be a "{ msg: string }"' },
   ]}
 />
-
-
-<!-- ---
-
-<Code
-  title="'Stringly-typed' APIs"
-  code={require("!raw-loader!./demo/emitter.ts")}
-  steps={[
-    { range: [7, 10], notes: 'Define events' },
-    { range: [13, 16], notes: 'Create strict emiiter' },
-    { range: [18, 21] },
-    { range: [23, 24] },
-    { range: [26, 27] },
-    { range: [29, 30] },
-    { range: [32, 33] },
-  ]}
-/> -->
 
 ---
 
