@@ -6,10 +6,8 @@ interface Person {
   age: number;
 }
 
-const wasBornInCountry =
-  (person: Person) => person.birthCountry === 'Germany';
-const wasNaturalized =
-  (person: Person) => Boolean(person.naturalizationDate);
+const wasBornInCountry = (person: Person) => person.birthCountry === 'Germany';
+const wasNaturalized = (person: Person) => Boolean(person.naturalizationDate);
 
 const isCitizen = either(wasBornInCountry, wasNaturalized);
 const isOver18 = (person: Person) => person.age >= 18;
